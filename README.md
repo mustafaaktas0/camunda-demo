@@ -15,10 +15,35 @@
 
 ## Postman URL
 
-start-process (POST) http://localhost:8081/engine-rest/process-definition/key/leaveRequest/start
+- start-process (POST) http://localhost:8081/engine-rest/process-definition/key/leaveRequest/start
 
-get-task-information (GET) http://localhost:8081/engine-rest/task?processInstanceId=e2e5e399-f277-11ed-921c-0e54157fcc31
+```
+{
+  "variables": {
+    "var1": {
+      "value": "value1",
+      "type": "String"
+    },
+    "var2": {
+      "value": 123,
+      "type": "Integer"
+    }
+  }
+}
+ ```
 
-complete-task (POST) http://localhost:8081/engine-rest/task/e2ee2000-f277-11ed-921c-0e54157fcc31/complete
+- get-task-information (GET) http://localhost:8081/engine-rest/task?processInstanceId=e2e5e399-f277-11ed-921c-0e54157fcc31
 
-get-task-by-assignee (GET) http://localhost:8081/engine-rest/task?assignee=MUSTAFAAKTAS
+- complete-task (POST) http://localhost:8081/engine-rest/task/e2ee2000-f277-11ed-921c-0e54157fcc31/complete
+
+```
+  {
+    "variables":{
+        "managerDecision":{
+            "value":"approved"
+        }
+    }
+}
+ ```
+
+- get-task-by-assignee (GET) http://localhost:8081/engine-rest/task?assignee=MUSTAFAAKTAS
